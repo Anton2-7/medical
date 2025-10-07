@@ -1,0 +1,41 @@
+header {
+  height: 80px;
+  align-content: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: anchor-center;
+  align-items: baseline;
+}
+
+.logo {
+  display: flex;
+  align-self: center;
+}
+
+.contacts-link {
+  margin-right: 59px;
+  font-family: "OpenSans", sans-serif;
+  color: rgba(115, 115, 115, 1);
+  text-decoration: none;
+  font-size: 15px;
+
+  font-weight: 600;
+}
+.nav-btn {
+  padding: 5px 58px 5px 58px;
+  background: transparent;
+  border: 2px solid rgba(255, 104, 91, 1);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  color: rgba(255, 104, 91, 1);
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+}

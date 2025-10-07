@@ -1,0 +1,39 @@
+.login-window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 350px;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0px 13px 19px 0px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  z-index: 1;
+  color: rgba(51, 51, 51, 1);
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+.login-overlay.open .login-window {
+  opacity: 1;
+}
+
+.login-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.login-overlay.open {
+  opacity: 1;
+}
