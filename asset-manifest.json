@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.70a8df83.css",
+    "main.js": "/static/js/main.668812e5.js",
+    "static/media/logo.svg": "/static/media/logo.f8cfeda9365f66f81a9d8441b4581d35.svg",
+    "static/media/medcard.svg": "/static/media/medcard.1891b5b1325ddf17d2be25971161417a.svg",
+    "static/media/stat.svg": "/static/media/stat.0e97134f1698fa4a2ad35e569c023e20.svg",
+    "static/media/heartbeat.svg": "/static/media/heartbeat.6294ec707a3b92fa668efeb6ed1e463c.svg",
+    "index.html": "/index.html",
+    "main.70a8df83.css.map": "/static/css/main.70a8df83.css.map",
+    "main.668812e5.js.map": "/static/js/main.668812e5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.70a8df83.css",
+    "static/js/main.668812e5.js"
+  ]
+}
