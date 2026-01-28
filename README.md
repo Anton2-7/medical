@@ -36,7 +36,7 @@ npm start
 
 ```bash
 # Клонируйте репозиторий (если ещё не клонировали)
-git clone https://github.com/ваш-username/medical.git
+git clone https://github.com/Anton2-7/medical.git
 
 # Перейдите в папку проекта
 cd medical
