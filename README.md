@@ -11,7 +11,7 @@ The project uses the standard Create React App structure. To run, run the follow
 
 ```bash
 # Clone the repository (if you haven't already)
-git clone https://github.com/your-username/medical.git
+git clone https://github.com/Anton2-7/medical.git
 
 # Change to the project folder
 cd medical
