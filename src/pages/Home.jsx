@@ -46,7 +46,7 @@ function Home() {
                     <div className="card-descr">Рыба текст</div>
                 </Link>
 
-            </div>) : (<div className='center'>Пожалуйста, войдите в систему, чтобы получить доступ к панели управления.</div>)}
+            </div>) : (<div className='center logout-attention'>Пожалуйста, войдите в систему, чтобы получить доступ к панели управления.</div>)}
 
         </div >
     )

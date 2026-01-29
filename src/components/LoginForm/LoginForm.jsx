@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import './style.css';
 
 function LoginForm({ isOpen, login, closeModal }) {
@@ -6,7 +6,8 @@ function LoginForm({ isOpen, login, closeModal }) {
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
 
-    if (!isOpen) return null;
+    const formRef = useRef(null);
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -25,9 +26,27 @@ function LoginForm({ isOpen, login, closeModal }) {
         }
     };
 
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (formRef.current?.contains(event.target)) return;
+            closeModal(false);
+        };
+
+        document.addEventListener("click", handleClickOutside, true);
+        return () => {
+            document.removeEventListener("click", handleClickOutside, true);
+        };
+    }, [closeModal]);
+    if (!isOpen) return null;
+
     return (
-        <form onSubmit={handleSubmit} className="form-login" onClick={(e) => e.stopPropagation()}>
+        <form
+            ref={formRef}
+            onSubmit={handleSubmit}
+            className="form-login"
+        >
             <h2 className="login-form__title">Авторизация</h2>
+
             {error && <div className="form-error">{error}</div>}
 
             <p className="form-descr">Введите ваш e-mail</p>
@@ -49,7 +68,9 @@ function LoginForm({ isOpen, login, closeModal }) {
                 required
             />
 
-            <button className="form-btn" type="submit">Войти</button>
+            <button className="form-btn" type="submit">
+                Войти
+            </button>
         </form>
     );
 }

@@ -11,6 +11,7 @@ function Header({ children }) {
         isLoginModalOpen,
         openLoginModal,
         closeLoginModal,
+        closeModal,
         login
     } = useAuth();
 
@@ -18,7 +19,7 @@ function Header({ children }) {
         <>
             <header>
                 <nav className="nav container">
-                    <Link className="logo" to="/">  <img src={Logo} alt="Логотип" /></Link>
+                    <Link className="logo" to="/medical">  <img src={Logo} alt="Логотип" /></Link>
                     <div className="nav-wrapper">
                         <Link className="contacts-link" to="/contacts">Контакты</Link >
                         {isAuthenticated ? (
@@ -36,8 +37,9 @@ function Header({ children }) {
 
             <Login
                 isOpen={isLoginModalOpen}
-                close={closeLoginModal}
+                closeLoginModal={closeLoginModal}
                 login={login}
+                seModalodalOpen={closeLoginModal}
             />
 
             {children}
