@@ -8,7 +8,6 @@ export async function initializeAuth() {
   if (!localStorage.getItem(USERS_STORAGE_KEY)) {
   const res = await fetch(`${process.env.PUBLIC_URL}/user.json`);    
   const users = await res.json();
-    console.log(users, "users");
     localStorage.setItem(USERS_STORAGE_KEY, JSON.stringify(users));
   }
 }

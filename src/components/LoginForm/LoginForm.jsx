@@ -4,17 +4,25 @@ import './style.css';
 function LoginForm({ isOpen, onLogin, setModalOpen, onClose }) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
 
     const handleSubmit = (e) => {
+        setError("");
         e.preventDefault();
-        if (onLogin(email, password)) {
-            onClose();
-            console.log("Успешный вход");
-        } else {
-            alert("Неверные данные");
-        }
-    };
+        try {
+            const succes = onLogin(email, password);
 
+            if (succes) {
+                onClose();
+            } else {
+                alert("Неверный логин или пароль");
+            }
+        } catch (error) {
+            console.error("Ошибка при входе:", error);
+            alert("Произошла ошибка при попытке входа. Пожалуйста, попробуйте еще раз.");
+
+        };
+    }
     if (!isOpen) return null;
 
     return (
@@ -39,6 +47,8 @@ function LoginForm({ isOpen, onLogin, setModalOpen, onClose }) {
                 required
             />
             <button className="form-btn" type="submit">Войти</button>
+            {error && <p className="form-error">{error}</p>}
+
         </form>
     );
 }
