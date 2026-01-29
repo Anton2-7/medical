@@ -10,7 +10,6 @@
   line-height: 80px;
   color: rgba(51, 51, 51, 1);
   max-width: 720px;
-  min-width: 500px;
   margin-bottom: 33px;
 }
 .center {
@@ -121,7 +120,6 @@
   .username {
     font-size: 36px ;
     line-height: 60px;
-    min-width: 358px;
   }
 
   .card-item:not(:last-child) {
@@ -135,9 +133,7 @@
   }
 }
 @media (max-width: 480px) {
-  .section-title {
-    min-width: 340px !important;
-  }
+
   .login-form__title {
     font-size: 20px;
   }
@@ -147,13 +143,17 @@
   .form-input {
     height: 45px;
   }
+
+    nav {
+    justify-content: space-between;
+  }
  
 }
 
 @media (max-width: 320px) {
   .section-title {
-    min-width: 300px;
     font-size: 20px;
     line-height: 24px;
   }
+
 }

@@ -39,3 +39,22 @@ nav {
   font-weight: 500;
   font-family: "Montserrat", sans-serif;
 }
+
+
+
+@media (max-width: 480px) {
+  .contacts-link {
+  margin-right: 20px;
+  margin-left: 20px;
+  font-family: "OpenSans", sans-serif;
+  color: rgba(115, 115, 115, 1);
+  text-decoration: none;
+  font-size: 15px;
+
+  font-weight: 600;
+}
+.nav-btn {
+  padding: 5px 20px 5px 20px;
+}
+ 
+}
