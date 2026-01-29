@@ -7,7 +7,7 @@ import { useAuth } from '../hooks/authHook';
 
 
 function Home() {
-    const { user, loading } = useAuth();
+    const { user } = useAuth();
 
     const handleClick = () => {
         window.location.href = '/contacts';
@@ -15,7 +15,6 @@ function Home() {
 
     const { isAuthenticated, openLoginModal, logout } = useAuth();
 
-    console.log("home");
     return (
         <div className="content-container"><section>
             {isAuthenticated ? <h2 className='username'>Привет, {user.name}</h2> : (<h2 className="section-title">Место для получения медицинской помощи</h2>)}
