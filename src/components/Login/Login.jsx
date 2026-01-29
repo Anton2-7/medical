@@ -2,7 +2,7 @@ import LoginForm from '../LoginForm/LoginForm';
 import './style.css';
 import { useEffect } from 'react';
 
-function Login({ isOpen, onClose, onLogin }) {
+function Login({ isOpen, closeModal, login }) {
 
     useEffect(() => {
         if (isOpen) {
@@ -16,10 +16,10 @@ function Login({ isOpen, onClose, onLogin }) {
     if (!isOpen) return null;
 
     return (
-        <div className={`login-overlay ${isOpen ? 'open' : ''}`} onClick={onClose}>
+        <div className={`login-overlay ${isOpen ? 'open' : ''}`} onClick={closeModal}>
 
             <div className="login-window" onClick={(e) => e.stopPropagation()}></div>
-            <LoginForm onLogin={onLogin} isOpen={isOpen} onClose={onClose} />
+            <LoginForm login={login} isOpen={isOpen} closaModal={closeModal} />
         </div >
     )
 }

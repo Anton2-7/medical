@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './style.css';
 
-function LoginForm({ isOpen, onLogin, onClose }) {
+function LoginForm({ isOpen, login, closeModal }) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
@@ -13,10 +13,10 @@ function LoginForm({ isOpen, onLogin, onClose }) {
         setError("");
 
         try {
-            const success = await onLogin(email, password);
+            const success = await login(email, password);
 
             if (success) {
-                onClose();
+                closeModal();
             } else {
                 setError("Неверный логин или пароль ❌");
             }

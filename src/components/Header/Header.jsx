@@ -36,8 +36,8 @@ function Header({ children }) {
 
             <Login
                 isOpen={isLoginModalOpen}
-                onClose={closeLoginModal}
-                onLogin={login}
+                close={closeLoginModal}
+                login={login}
             />
 
             {children}
