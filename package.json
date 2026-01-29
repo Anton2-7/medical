@@ -1,6 +1,6 @@
 {
   "name": "testing",
-  "homepage": "http://192.168.0.137:3000/medical",
+  "homepage": "https://anton2-7.github.io/medical",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
