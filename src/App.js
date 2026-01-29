@@ -6,14 +6,15 @@ import Contacts from "./pages/Contacts";
 
 function App() {
   return (
-    <Header>
+    <>
+    <Header/>
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contacts" element={<Contacts />} />
         </Routes>
       </main>
-    </Header>
+      </>
   );
 }
 
