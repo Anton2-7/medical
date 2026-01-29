@@ -24,8 +24,16 @@
   letter-spacing: 0.2px;
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
-  margin-right: 10px;
+  margin-right: 30px;
   color: rgba(255, 255, 255, 1);
+}
+.username {
+  margin-top: 143px;
+  margin-bottom: 29px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  font-size: 3.7rem;
 }
 
 .btn-contacts {
@@ -42,7 +50,14 @@
   color: rgba(255, 104, 91, 1);
 }
 .btn-wrapper {
-  margin-bottom: 92px;
+  margin-bottom: 82px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-wrapper button {
+  margin-top: 20px;
 }
 .card-item {
   width: 328px;
@@ -82,4 +97,60 @@
   height: 2px;
   background-color: rgba(255, 104, 91, 1);
   margin-bottom: 20px;
+}
+
+
+@media (max-width: 1375px) {
+  .container,
+  .content-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+    .btn-login, .btn-contacts {
+    margin: 0;
+    width: 100% ;
+    justify-content: center;
+  }
+  .section-title,
+  .username {
+    font-size: 36px ;
+    line-height: 60px;
+    min-width: 358px;
+  }
+
+  .card-item:not(:last-child) {
+    margin: 0;
+  }
+
+  .btn-login, .btn-contacts, .card-item{
+    margin: 0;
+    width: 100% ;
+    justify-content: center;
+  }
+}
+@media (max-width: 480px) {
+  .section-title {
+    min-width: 340px !important;
+  }
+  .login-form__title {
+    font-size: 20px;
+  }
+  .form-login {
+    width: 300px;
+  }
+  .form-input {
+    height: 45px;
+  }
+ 
+}
+
+@media (max-width: 320px) {
+  .section-title {
+    min-width: 300px;
+    font-size: 20px;
+    line-height: 24px;
+  }
 }

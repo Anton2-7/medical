@@ -1,5 +1,4 @@
 import './Contacts.css'
-import './media/Home.css'
 
 function Contacts() {
     return (

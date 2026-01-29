@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import './style.css';
-import '../../pages/media/Home.css';
 
 function LoginForm({ isOpen, onLogin, setModalOpen, onClose }) {
     const [email, setEmail] = useState("");

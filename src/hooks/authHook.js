@@ -23,10 +23,12 @@ export function AuthProvider({ children }) {
     init();
   }, []);
 
-  const login = (email, password) => {
-    const success = loginService(email, password);
+  const login = async (email, password) => {
+    const success = await loginService(email, password);
     if (success) {
-      setUser(getCurrentUser());
+      
+      const currentUser = getCurrentUser();
+      setUser(currentUser);
       setIsLoginModalOpen(false);
     }
     return success;
